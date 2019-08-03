@@ -1,0 +1,212 @@
+.m-0 {
+	margin: 0px !important;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.text-md-right {
+	text-align: right;
+}
+
+#content {
+	width: 100%;
+	height: 100vh;
+}
+
+#content .content-image {
+	height: 100%;
+	background-image: url("https://wearepuredesign.com/dolomia/assets/img/trip6.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.align-center {
+	align-items: center;
+}
+
+#content .content-form {
+	height: 95%;
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+}
+
+#content .content-form.connexion {
+	align-items: center;
+}
+
+#content .content-form #contact-form {
+	margin-top: 50px;
+}
+
+#content .content-image, #content .content-form, #footer {
+	width: 50%;
+	position: relative;
+    min-height: 1px;
+    float: left;
+}
+
+#content .content-form label, #content .content-form .text {
+	font-size: 14px;
+	font-family: "Trirong", serif;
+    color: #6E6B66;
+    line-height: 24px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    padding: 0;
+}
+
+input[type=checkbox] {
+	margin: 0;
+}
+
+/* Footer */
+#content #footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5%;
+}
+
+.checkbox {
+	margin: 0;
+}
+
+.checkbox label:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.checkbox .cr {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: .5em;
+  margin-top: .3em;
+}
+
+.checkbox .cr .cr-icon {
+  position: absolute;
+  font-size: 1em;
+  line-height: 0;
+  top: 2px;
+  left: 15%;
+}
+
+.checkbox label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label input[type="checkbox"]+.cr>.cr-icon {
+  opacity: 0;
+}
+
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
+  opacity: 1;
+}
+
+.content-select select {
+	border: none;
+	outline: inherit;
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 9px !important;
+    font-family: "Trirong", serif;
+    font-size: 14px;
+    background-color: #F6F6F6;
+    color: #2F2911;
+    font-weight: 400;
+}
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  	.content-select select {
+   		padding-right: 18px
+  	}
+}
+.content-select label {
+  	position: relative;
+  	width: 100%;
+  	margin: 0 !important;
+}
+.content-select label:after {
+	content: "\f078";
+	font-family: "FontAwesome";
+	font-size: 11px;
+	color: #6E6B66;
+	right: 8px;
+	top: 8px;
+	padding: 0 0 2px;
+	position: absolute;
+	pointer-events: none;
+}
+.content-select label:before {
+	content: '';
+	right: 4px;
+	top: 0px;
+	width: 23px;
+	height: 18px;
+	background: #F6F6F6;
+	position: absolute;
+	pointer-events: none;
+	display: block;
+}
+
+
+/* Query Mobile */
+@media (max-width: 767px) {
+
+	#content .content-image {
+		display: none;
+	}
+
+	#content .content-form #contact-form {
+		margin-top: 0px;
+	}
+
+	#content .content-image, #content .content-form, #footer {
+		width: 100%;
+	}
+
+	#content .content-form {
+		height: auto;
+		padding: 15px;
+	}
+}
+/* End */
+
+
+/* Query Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+	#content .content-form {
+		align-items: center;
+	}
+}
+ /* End Query */
+
+@media (max-height: 650px) {
+	#content .content-form {
+		overflow: auto;
+	}
+
+	#content .content-form #contact-form {
+		margin-top: 10px;
+	}
+
+	#content .content-form.connexion {
+		align-items: normal;
+	}
+}
